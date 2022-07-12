@@ -21,7 +21,8 @@ module Mailgun
       rest_client_params = {
         user: 'api',
         password: api_key,
-        user_agent: "mailgun-sdk-ruby/#{Mailgun::VERSION}"
+        user_agent: "mailgun-sdk-ruby/#{Mailgun::VERSION}",
+        ssl_version: 'TLSv1_2'
       }
       rest_client_params[:timeout] = timeout if timeout
 
